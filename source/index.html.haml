@@ -1,0 +1,13 @@
+---
+title: JavaScript Lesson Plan
+---
+
+%h1
+  Introduction to JavaScript
+  
+%ul
+  - sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
+    - if !category.blank?
+      - pages.each do |page|
+        %li
+          = lesson_link page

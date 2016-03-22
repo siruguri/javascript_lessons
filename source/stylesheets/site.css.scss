@@ -1,11 +1,27 @@
 @charset "utf-8";
 @import "normalize";
 
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url('../fonts/SourceCodePro-Regular.otf');
+}
+
+code {
+  font-family: 'SourceCodePro', Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+}
+
 body {
   background: #ECC561;
-  text-align: center;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 16px;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  padding: 20px 10px;
 }
 
 .logo img {
@@ -64,4 +80,8 @@ h1 {
   to {
     -webkit-transform: scale(1);
   }
+}
+
+.next_lesson_link {
+  float: right;
 }

@@ -1,0 +1,41 @@
+!!!html
+%html
+  %head
+    %meta{content: "IE=edge", 'http-equiv' => "X-UA-Compatible"}
+    %meta{charset: "utf-8"}
+    %meta{content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no', name: "viewport"}
+
+    // Use title if it's in the page YAML frontmatter
+
+    %title
+      = current_page.data.title || "Middleman"
+
+    %link{href: '//fonts.googleapis.com/css?family=Lato:300,400', rel: 'stylesheet', type: 'text/css'}
+    %link{rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous"}
+
+    = stylesheet_link_tag :site
+    = javascript_include_tag :all
+
+  %body{class: "container #{page_classes}"}
+    .col-xs-12
+      = yield
+      - if page_classes.split(/\s+/).include? 'lessons'
+        = link_to "Next Lesson", next_lesson_url('javascript', current_page.data['lesson_index']), class: 'next_lesson_link'
+      #disqus_thread
+    %script
+      var disqus_config = function () {
+      this.page.url = 'https://www.javascriptlessons.site/#{current_page.path}'; 
+      this.page.identifier = '#{current_page.path}';
+      };
+
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//javascripttutorials.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+
+    %noscript
+      Please enable JavaScript to 
+      %a{href: "https://disqus.com/?ref_noscript", rel: "nofollow"}
+        view and submit comments.

@@ -9,6 +9,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :markdown_engine, :redcarpet
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -28,7 +30,11 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
+require 'source/helpers/taxonomy_helpers.rb'
+require 'source/helpers/display_helpers.rb'
+helpers TaxonomyHelpers
+helpers DisplayHelpers
+
 #   def some_helper
 #     "Helping"
 #   end
@@ -41,4 +47,10 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+end
+
+activate :s3_sync do |config|
+  # This shd be overridden by the CLI parameter
+  config.bucket                     = 'www.javascriptlessons.site'
+  config.region                     = 'us-west-2'
 end
