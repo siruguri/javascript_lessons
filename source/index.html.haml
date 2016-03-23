@@ -6,8 +6,6 @@ title: JavaScript Lesson Plan
   Introduction to JavaScript
   
 %ul
-  - sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
-    - if !category.blank?
-      - pages.each do |page|
-        %li
-          = lesson_link page
+  - sorted_lessons("javascript").each do |pg|
+    %li
+      = lesson_link(pg[1])

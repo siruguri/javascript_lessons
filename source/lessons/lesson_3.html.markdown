@@ -1,5 +1,6 @@
 ---
 category: javascript
+href_target_title: Glossary Break
 title: "Lesson 3: Glossary Break"
 page_class: lesson
 lesson_index: 3

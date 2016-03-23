@@ -14,9 +14,9 @@ lesson_index: 1
   to add two numbers.
 %p
   If we type in "cat" + "horse", we get "cathorse" - the semantics are
-  that two words are concatenated, but the syntax is the same as for
+  that two words are concatenated, but the [syntax](glossary/syntax.html) is the same as for
   mathematical addition of two numbers.
 %p
   When the same syntax is used with many semantics, it is referred to as
-  "#{link_to 'overloading', '/glossary/overloading.html'}," specifically as "overloading an operator." The
+  "[overloading](glossary/overloading.html)," specifically as "overloading an operator." The
   "operator" in this case is the + sign.

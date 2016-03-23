@@ -6,6 +6,27 @@
   src: url('../fonts/SourceCodePro-Regular.otf');
 }
 
+.site-header {
+  position: fixed;
+  height: 30px;
+  width: 160px;
+  padding: 5px;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  top: 10px;
+  right: 2%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .index-link {
+    float: right;
+    display: none;
+    a {
+      color: #a52a2a;
+    }
+  }
+}
+
 code {
   font-family: 'SourceCodePro', Helvetica, Arial, sans-serif;
   font-size: 1.1em;
@@ -84,4 +105,10 @@ h1 {
 
 .next_lesson_link {
   float: right;
+}
+
+.glossary img,
+.lessons img {
+  display: block;
+  margin: 0 auto;
 }
