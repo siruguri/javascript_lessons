@@ -12,3 +12,7 @@ lesson_index: 10
 * Calling a function with arguments, aka _parameters_
 * Syntax for JavaScript conditional expressions and conditional flows
 * A function's _return value_
+* Node IDs
+* Node types
+* Text vs value
+

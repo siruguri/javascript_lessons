@@ -21,4 +21,8 @@ We are going to use the above text box to see how functions work. If we inspect 
 see a `script` node, and inside it some JavaScript code that defines a function. Like the functions we saw defined for
 the node data type, this function takes some number (1) of arguments.
 
+You can run &mdash; or call &mdash; this function in the inspector, and see the evaluated results.
 
+# Exercises
+
+* The supplied function only checks three states - add more states via the Inspector, and check that the function still works correctly.

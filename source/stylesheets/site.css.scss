@@ -11,13 +11,16 @@
   height: 30px;
   width: 160px;
   padding: 5px;
-  text-align: center;
+
   font-size: 1em;
   color: white;
   top: 10px;
   right: 2%;
   background-color: rgba(0, 0, 0, 0.4);
 
+  .title {
+    text-align: center;
+  }    
   .index-link {
     float: right;
     display: none;
@@ -25,11 +28,19 @@
       color: #a52a2a;
     }
   }
+  .menu-items {
+    display: none;
+    .item {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
 
 code {
   font-family: 'SourceCodePro', Helvetica, Arial, sans-serif;
   font-size: 1.1em;
+  margin: 0 2px;
 }
 
 body {
@@ -111,4 +122,22 @@ h1 {
 .lessons img {
   display: block;
   margin: 0 auto;
+}
+.answer {
+  color: blue;
+}
+
+pre[class*="language-"] {
+  margin: 0;
+}
+
+.code-insert {
+  display: none;
+}
+
+.code-insert:before {
+  display: block;
+  content: 'The code in this page is';
+  background-color: #AE7337;
+  padding: 5px 0 5px 20px;
 }

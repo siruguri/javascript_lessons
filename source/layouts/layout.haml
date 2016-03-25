@@ -13,21 +13,33 @@
     %link{href: '//fonts.googleapis.com/css?family=Lato:300,400', rel: 'stylesheet', type: 'text/css'}
     %link{rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous"}
 
+    = stylesheet_link_tag :prism
     = stylesheet_link_tag :site
     = javascript_include_tag 'jquery.min'
+    = javascript_include_tag :prism
     = javascript_include_tag :all
 
-  %body{class: "container #{page_classes}"}
+  %body{class: "container #{page_classes} #{current_page.data['page_class']}"}
     .col-xs-12
       = yield
-      - if page_classes.split(/\s+/).include? 'lessons'
+      .code-insert
+        %a#code-insert
+        %pre
+          %code.language-javascript.language
+
+      - if "#{page_classes} #{current_page.data['page_class']}".split(/\s+/).include? 'lesson'
         = link_to "Next Lesson", next_lesson_url('javascript', current_page.data['lesson_index']), class: 'next_lesson_link'
       #disqus_thread
     #menulink
       .site-header
         .index-link
           = link_to 'Index', '/'
-        Hover for Menu
+        .title
+          Hover for Menu
+        .menu-items
+          .item.menu-action{'data-action' => 'toggle_code'}
+            Toggle Code
+
     %script
       var disqus_config = function () {
       this.page.url = 'https://www.javascriptlessons.site/#{current_page.path}'; 

@@ -6,6 +6,8 @@ page_class: lesson
 lesson_index: 4.5
 ---
 
+# What is Object-Oriented Programming?
+
 In a more JavaScript-specific way, we say that the behaviors of two pieces of data of the same type are the same, by
 saying that two "instances" or "objects" of the same type have the same set of "instance functions" or "instance
 methods" defined on them. These are the behaviors that "make sense" or are "relevant" to data&mdash;or objects &mdash;
