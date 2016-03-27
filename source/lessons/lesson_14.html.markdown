@@ -1,25 +1,25 @@
 ---
 category: javascript
-title: "Lesson 13: Why jQuery?"
+title: "Lesson 14: Why jQuery?"
 page_class: lesson
-lesson_index: 13
+lesson_index: 14
 ---
 
 # Why jQuery?
 <script>
     function check_state(text) {
-	if(text == 'AL' || text == 'AR' || text == 'WY') {
-    $('#answer').html('State!');
-	} else {
-    $('#answer').html('Not A State');
-	}
+        if(text == 'AL' || text == 'AR' || text == 'WY') {
+            $('#answer').html('State!');
+        } else {
+            $('#answer').html('Not A State');
+        }
     }
 
     function set_answer(text) {
       $('#answer').html(text);
     }
     function check_inputbox() {
-    check_state($('#state-name-box').val())
+      check_state($('#state-name-box').val())
     }
     function set_click_handle() {
       $('#submit-state').click(check_inputbox);
@@ -38,3 +38,8 @@ jQuery is a library that, among other things, helps reduce the
 clutter, by offering a set of functions that visually simplify the
 vocabulary for common tasks, like setting event handlers.
 
+Among other things, notice that:
+
+* `document.addEventListener('DOMContentLoaded')` &rarr; `$(document).ready()` &mdash; _much simpler_!
+* `document.getElementById('submit-state').addEventListener('click')` &rarr; `$('#submit-state').click()`
+* Everything is a function, rather than being a mix of properties and functions.

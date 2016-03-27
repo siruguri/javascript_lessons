@@ -7,13 +7,13 @@ lesson_index: 9
 
 # Functions and Forms
 <script>
-    function check_state(text) {
-	if(text == 'AL' || text == 'AR' || text == 'WY') {
-	    return true;
-	} else {
-	    return false;
-	}
-    }
+  function check_state(text) {
+     if(text == 'AL' || text == 'AR' || text == 'WY') {
+         return true;
+     } else {
+         return false;
+     }
+   }
 </script>
 <input type=text placeholder='Enter State Name' id=state-name-box>
 
@@ -25,4 +25,6 @@ You can run &mdash; or call &mdash; this function in the inspector, and see the 
 
 # Exercises
 
-* The supplied function only checks three states - add more states via the Inspector, and check that the function still works correctly.
+* The supplied function only checks three of the US states - add more
+states by re-defining it in the Console, and check that the function
+still works correctly.

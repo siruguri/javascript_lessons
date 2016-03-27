@@ -6,6 +6,11 @@
   src: url('../fonts/SourceCodePro-Regular.otf');
 }
 
+li {
+  /* Because some list items have inline code in them */
+  margin-bottom: 5px;
+}
+
 .site-header {
   position: fixed;
   height: 30px;
@@ -131,7 +136,7 @@ pre[class*="language-"] {
   margin: 0;
 }
 
-.code-insert {
+.code-insert pre {
   display: none;
 }
 

@@ -16,7 +16,7 @@ functions = ->
       t = $(evt.target);
       switch t.data('action')
         when 'toggle_code'
-          $('.code-insert').toggle()
+          $('.code-insert pre').toggle()
           $('.menu-items').hide()
           $('.index-link').hide()
           $('.site-header').css('width', '160px')
@@ -45,7 +45,11 @@ functions = ->
       $('.index-link').hide()
       null
     scripts = $('body script')
-    if scripts.length > 0
+    if scripts.length > 1
       $('pre .language').html($(scripts[0]).html())
+    else
+      $('.code-insert').hide()
+      $('.menu-action[data-action=toggle_code]').hide()
+        
       
 $(document).ready(functions)

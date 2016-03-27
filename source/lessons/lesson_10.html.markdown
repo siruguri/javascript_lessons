@@ -21,7 +21,7 @@ lesson_index: 10.2
 In the previous exercise, we were calling the function manually in the
 Inspector. That's not how browser interactions work in practice &mdash; users instead interact with the browser either by typing things, or by clicking around, perhaps more the latter than the former.
 
-So we need a way to recognize when either of these actions has been taken &mdash; in JavaScript land, we say that we have to "_handle_ to either of these _events_."
+So we need a way to recognize when either of these actions has been taken &mdash; in JavaScript land, we say that we have to "_handle_ these _events_."
 
 So now let's add a _click event handler_ to the submit button
 above. There are a couple of ways of doing but one is to use a
