@@ -150,3 +150,17 @@ pre[class*="language-"] {
   font-size: 1.1em;
   font-weight: bold;
 }
+
+.mc_embed_signup {
+  margin-top: 60px;
+  input[type=email] {
+    width: 40%;
+    height: 60px;
+  }
+  .btn {
+    height: 60px;
+  }
+}
+.clear-my {
+  display: inline-block;
+}

@@ -8,8 +8,15 @@
 
     // Use title if it's in the page YAML frontmatter
 
+    %style{type: "text/css"}
+      #mc_embed_signup {
+      background:#fff;
+      clear:left; font:14px Helvetica,Arial,sans-serif;
+      }
+      
     %title
       = current_page.data.title || "Middleman"
+    = stylesheet_link_tag "//cdn-images.mailchimp.com/embedcode/slim-10_7.css"
 
     %link{href: '//fonts.googleapis.com/css?family=Lato:300,400', rel: 'stylesheet', type: 'text/css'}
     %link{rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous"}
@@ -62,6 +69,21 @@
 
       ga('create', 'UA-58902823-2', 'auto');
       ga('send', 'pageview');
+
+    // mailchimp
+    
+    .mc_embed_signup.col-xs-12
+      %form.validate#mc-embedded-subscribe-form{action: "//site.us13.list-manage.com/subscribe/post?u=88834c2d9adaa52b12e9364c7&amp;id=9c2cf9e0d7", method: "post", name: "mc-embedded-subscribe-form", target: "_blank", novalidate: true}
+        .mc_embed_signup_scroll
+        %label{for: "mce-EMAIL", style: 'display: block'}
+          Subscribe to our mailing list
+        %input.email.form-control#mce-EMAIL{type: "email", value: "", name: "EMAIL", placeholder: "email address", required: true, style: 'display: inline-block'}
+
+        %div{style: "position: absolute; left: -5000px;", "aria-hidden" => "true"}
+          %input{type: "text", name: "b_88834c2d9adaa52b12e9364c7_9c2cf9e0d7", tabindex: "-1", value: ""}
+        .clear-my{style: 'width: 25%'}
+          %input.btn.btn-primary.button#mc-embedded-subscribe{type: "submit", value: "Subscribe", name: "subscribe", style: 'display: inline-block'}
+
 
     %noscript
       Please enable JavaScript to 
