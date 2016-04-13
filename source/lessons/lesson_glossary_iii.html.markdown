@@ -14,5 +14,6 @@ lesson_index: 10
 * A function's _return value_
 * Node IDs
 * Node types
+* Node properties
+* DOM traversal
 * Text vs value
-

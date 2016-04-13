@@ -1,20 +1,14 @@
 ---
 category: javascript
-title: "Lesson 1: Syntax and Semantics"
+title: "Lesson 1: Introduction"
 page_class: lesson
 lesson_index: 1
 ---
 
-#  Syntax and Semantics
+# Introduction: The Hangman Game
 
-In the browser console, you can type in 1+2, and it will evaluate it
-to 3. The "semantics" or meaning of this "expression" is that we want
-to add two numbers.
+In this JavaScript lesson, we are going to construct the Hangman Game - the user has to guess a word, one letter at a time.
 
-If we type in "cat" + "horse", we get "cathorse" - the semantics are
-that two words are concatenated, but the [syntax](glossary/syntax.html) is the same as for
-mathematical addition of two numbers.
+This lesson will help us understand the basics of JavaScript, how it interacts with the browser, and how we set up an HTTP based client-server application.
 
-When the same syntax is used with many semantics, it is referred to as
-"[overloading](glossary/overloading.html)," specifically as "overloading an operator." The
-"operator" in this case is the + sign.
+We will break for "glossary updates" periodically where we have learned a lot of new terminology that is worth reviewing.

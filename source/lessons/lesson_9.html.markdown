@@ -7,15 +7,16 @@ lesson_index: 9
 
 # Functions and Forms
 <script>
-  function check_state(text) {
-     if(text == 'AL' || text == 'AR' || text == 'WY') {
+  function check_guess(guess) {
+     // This is a very simple game where the answer is cat. Or act.
+     if(guess == 'c' || guess == 'a' || guess == 't') {
          return true;
      } else {
          return false;
      }
    }
 </script>
-<input type=text placeholder='Enter State Name' id=state-name-box>
+<input type=text placeholder='Enter Guess' id=guess>
 
 We are going to use the above text box to see how functions work. If we inspect the source code for this page, we can
 see a `script` node, and inside it some JavaScript code that defines a function. Like the functions we saw defined for
@@ -25,6 +26,4 @@ You can run &mdash; or call &mdash; this function in the inspector, and see the 
 
 # Exercises
 
-* The supplied function only checks three of the US states - add more
-states by re-defining it in the Console, and check that the function
-still works correctly.
+* The supplied function only checks three letters. How can you write this function so that you just have to mention the word in one place, rather than break it up into all its letters?

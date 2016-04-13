@@ -10,7 +10,9 @@ lesson_index: 5.9
 
 * instances
 * data types
+* classes
 * objects
 * object oriented
+* function arguments
 * JavaScript properties
 * JavaScript instance methods
