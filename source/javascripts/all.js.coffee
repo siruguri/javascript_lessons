@@ -23,7 +23,6 @@ functions = ->
           $('.site-header').css('height', '50px')
           
     $('#menulink').mouseenter (evt) ->
-      console.log 'triggered mouseenter'
       $('.site-header').animate
           width: '33%'
           height: '20%'
@@ -32,7 +31,6 @@ functions = ->
       $('.index-link').toggle()
       null
     $('#menulink').mouseleave (evt) ->
-      console.log 'triggered mouseleave'
       $('.site-header').stop().animate
           width: '160px'
           height: '30px'
