@@ -38,7 +38,7 @@ of that type.
 
 This is the crux of what's called "object oriented programming," a topic of vast and frequently controversial
 scope. JavaScript is an object-oriented language, though whether it is "pure" in its devotion to the principles of
-object-oriented coding or whether its own variant of it (that is referred to "prototype based
+object-oriented coding or whether its own variant of it (that is referred to as "prototype based
 object-oriented programming") is "better" is beyond the scope of this tutorial.
 
 In JavaScript, objects can either have "properties" or respond to "functions" (aka "methods.") Methods sometimes require

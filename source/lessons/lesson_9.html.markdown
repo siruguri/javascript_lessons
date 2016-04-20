@@ -24,6 +24,8 @@ the node data type, this function takes some number (1) of arguments.
 
 You can run &mdash; or call &mdash; this function in the inspector, and see the evaluated results.
 
+To hook the function into what the user has typed in the text box above, you have to access the *value* of the box (which is the JavaScript `value` property.)
+
 # Exercises
 
 * The supplied function only checks three letters. How can you write this function so that you just have to mention the word in one place, rather than break it up into all its letters?

@@ -11,7 +11,7 @@ Now that we have accessed an instance, let's see some of the functions that let 
 * `.getAttribute()` &mdash; 1 argument
 * `.setAttribute()` &mdash; 2 arguments
 * `.textContent` &mdash; writable property
-* `.tagName` &mdash; read-only property
+* `.tagName` &mdash; read-only property: try to modify it, and see what happens. Note how it [normalizes](glossary/normalization.html) the tagname by converting the letters to upper-case.
 * `.children` &mdash; property
 
 The properties of a node can themselves have properties and behaviors
@@ -23,3 +23,4 @@ manipulate the CSS of a node.
 * Let's try adding the `draggable` property to an element and see what happens.
 * Go to xkcd.com, and in your browser inspector, type in `n = document.getElementById('comic')`. Why does the `n.children.length` return 3, even though that node (DIV) only has an image child?
 * What do [the different node types](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType) mean? Can you find documents on the Internet that have examples of all of these?
+* To traverse all the children starting from the top, you can use `document.documentElement` - think about how you'd write a function that can figure out how deep the relationships go.

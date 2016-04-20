@@ -28,7 +28,7 @@ latter than the former.
 So we need a way to recognize when either of these actions has occurred &mdash; in JavaScript land, we say that we have to "_handle_ these _events_."
 
 So now let's add a _click event handler_ to the submit button
-above. There are a couple of ways of doing but one is to use an
+above. There are a couple of ways of doing this, but one is to use an
 instance method available for DOM node objects. The DOM node function
 that lets you do this is called `addEventListener`, and it needs two
 arguments:

@@ -8,12 +8,13 @@ lesson_index: 10
 
 # Glossary Break
 
-* Function definitions
-* Calling a function with arguments, aka _parameters_
-* Syntax for JavaScript conditional expressions and conditional flows
-* A function's _return value_
 * Node IDs
 * Node types
 * Node properties
 * DOM traversal
-* Text vs value
+* Node's text vs its value
+* Function definitions
+* Over-riding function definitions
+* Calling a function with arguments, aka _parameters_
+* Syntax for JavaScript conditional expressions and conditional flows
+* A function's _return value_

@@ -12,4 +12,4 @@ The equivalent JavaScript properties are created through a process described as 
 
 Hence, to change the background color of a node to the color black, say, you would say something like `node.style.backgroundColor = 'black'`
 
-Let's try to put some of these ideas together now to implement a simple form entry check - the user will type something intended to be a zipcode into a text box and we will provide JavaScript to validate the entered information.
+Let's try to put some of these ideas together now to implement the very beginning of our Hangman game. The first version of the form will simply take a letter as a guess, and say whether it's in the word or not.
