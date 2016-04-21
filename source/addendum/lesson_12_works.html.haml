@@ -1,0 +1,18 @@
+---
+category: addenda
+title: "Lesson 12: Waiting For The Document"
+page_class: lesson
+lesson_index: 12
+---
+
+%h1
+  Input and Output Within the Browser
+
+%input#guess{type: 'text', placeholder: 'Enter Guess'}
+%input#submit-guess{type: 'submit'}
+#answer.answer
+  No Guess Yet
+
+The code now has all the pieces we just experimented with - the event handler is registered, it gets the answer and passes it to the method that checks it against a (small) list of state names, and then sets the answer appropriately. *And*, we have moved the script to the bottom of the document so that the DOM is "in place" by the time the browser sees the script.
+
+= partial '../lessons/full_hangman_code'

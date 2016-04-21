@@ -1,0 +1,39 @@
+---
+category: javascript
+title: "Lesson 12.5: Waiting For The Document"
+page_class: lesson
+lesson_index: 12
+---
+
+%h1
+  Are You Ready Yet?
+
+= partial "full_hangman_code"
+%input#guess{type: 'text', placeholder: 'Enter Guess'}
+%input#submit-guess{type: 'submit'}
+#answer.answer
+  No Guess Yet
+
+%p
+  The code now has all the pieces we just experimented with - the event handler is registered, it gets the answer and passes it to the method that checks it against a (small) list of state names, and then sets the answer appropriately. Why doesn't this work?
+
+%p
+  If you look at the error generated in the console, that gives us a clue. When we attempt to set the event handler, the element with the ID _submit\_state_ doesn't exist. We know this because the error says that an attempt was made to use the _addEventListener_ function on _null_.
+
+%p
+  This tell us how browsers handle documents - by reading them from
+  top to bottom. The browser does not wait for the entire HTML
+  document to load before trying to run any JS code it has already
+  encountered.
+
+%p
+  Here's a 
+  %a{href: '/addendum/lesson_12_works.html'}
+    working example instead
+
+%h1
+  Exercises
+
+%ul
+  %li
+    To detect if a key has been pressed, or released, when typing inside an input box, you can set handlers for the events `keyup` and `keydown` - how would you use these to generate an answer without requiring a click?

@@ -1,0 +1,25 @@
+---
+category: javascript
+title: "Lesson 13: DOM Readiness"
+page_class: lesson
+lesson_index: 12.2
+---
+
+%h1
+  DOM Readiness Is An Event
+%input#guess{type: 'text', placeholder: 'Enter Guess'}
+%input#submit-guess{type: 'submit'}
+#answer.answer
+  No Guess Yet
+
+But in fact the readiness of the DOM itself turns out to be a browser event. So we don't need to insert our code at the bottom and rely parse order, when we can instead handle the _ready_ event:
+
+%pre
+  %code.language-javascript.language
+    :preserve
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('submit-state').addEventListener('click', check_inputbox);
+      });
+
+= partial 'full_hangman_code'
+= partial 'ready_event_code'

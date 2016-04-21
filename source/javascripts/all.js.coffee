@@ -44,7 +44,7 @@ functions = ->
       null
     scripts = $('body script')
     if scripts.length > 1
-      $('pre .language').html($(scripts[0]).html())
+      $('pre#code-insert .language').html($(scripts[0]).html())
     else
       $('.code-insert').hide()
       $('.menu-action[data-action=toggle_code]').hide()

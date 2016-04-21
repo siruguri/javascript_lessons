@@ -11,6 +11,8 @@ lesson_index: 12.5
 * Console and popups
 * Events
 * Event handlers
+* Specifying callbacks
+* Asynchronous execution
 * DOM readiness
 
 

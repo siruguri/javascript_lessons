@@ -32,7 +32,7 @@
       = yield
       .code-insert
         %a#code-insert
-        %pre
+        %pre#code-insert
           %code.language-javascript.language
 
       - if "#{page_classes} #{current_page.data['page_class']}".split(/\s+/).include? 'lesson'

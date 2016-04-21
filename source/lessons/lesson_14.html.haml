@@ -1,0 +1,46 @@
+---
+category: javascript
+title: "Lesson 14: Why jQuery?"
+page_class: lesson
+lesson_index: 14
+---
+
+%h1
+  Why jQuery?
+  
+%input#guess{type: 'text', placeholder: 'Enter Guess'}
+%input#submit-guess{type: 'submit'}
+#answer.answer
+  No Guess Yet
+
+%p
+  By now we have added a substantial amount of code to get a click
+  behavior to work. As it stands, JavaScript tends to be very verbose in
+  its choice of function names, and how the syntax is set up to correspond to various common tasks.
+  
+%p
+  jQuery is a library that, among other things, helps reduce the
+  clutter, by offering a set of functions that visually simplify the
+  vocabulary for common tasks, like setting event handlers.
+  
+%p
+  Among other things, notice that:
+
+%ul
+  %li
+    %code
+      document.addEventListener('DOMContentLoaded')
+    &rarr;
+    %code
+      $(document).ready()
+    &mdash; _much simpler_!
+  %li
+    %code
+      document.getElementById('submit-guess').addEventListener('click')
+    &rarr;
+    %code
+      $('#submit-guess').click()
+  %li
+    Everything is a function, rather than being a mix of properties and functions.
+
+= partial 'jquery_hangman_code'

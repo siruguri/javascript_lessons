@@ -1,0 +1,22 @@
+:javascript
+  function check_guess(guess) {
+    if(guess == 'c' || guess == 'a' || guess == 't') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  function set_answer(text) {
+    document.getElementById('answer').innerHTML = text;
+  }
+  
+  function check_inputbox() {
+    if(check_guess(document.getElementById('guess').value)) {
+    set_answer('Yes');
+    } else {
+    set_answer('No');
+    }
+  }
+  document.getElementById('submit-guess').addEventListener('click', check_inputbox);
+

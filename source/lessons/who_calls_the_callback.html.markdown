@@ -26,7 +26,25 @@ Let's say this other function is called `check_inputbox`. Then, to set it as the
 <pre><code class=language-javascript>
 document.getElementById('submit-guess').addEventListener('click', check_inputbox)
 </code></pre>
-So now, we have to define `check_inputbox`. Remember though that functions need an input - so what inputs will `check_inputbox` be passed when the click triggers?
+So now, we have to define `check_inputbox`. But looking at the syntax of the above statement, we are faced with two questions:
 
-The answer is that the function is passed the location of the click along with some other information - however, you can ignore these inputs when you define the function. Let's do this in the browser's Inspector.
+* Method calling syntax in JavaScript [requires that we end with a
+pair of parentheses](lessons/lesson_object_oriented.html), that are
+possibly delimiting a list of arguments. So why are the parentheses missing here?
+* Second, when the click triggers an event, who calls the function?
+
+The answer to the **second question** is easier - the function is defined by you, but is called by the browser's "JavaScript engine," which among other things keeps track of events and their callbacks for you.
+
+JavaScript calls this function _[asynchronously]_(glossary/asynchronous.html), meaning that the callback function is executed in parallel with other interactions. Usually callbacks run so fast, that you can't tell the difference between serial (synchronous) or parallel execution.
+
+When the engine summons the callback, it will also pass it some
+arguments. However, when you set the callback, you aren't actually
+calling the function itself - you are simply noting what its name
+is. That **answers the first question** - this is not a function call
+here, so you are not supposed to use the delimiting parentheses.
+
+The arguments that do get passed when the function is called will contain the location of the click, along with some
+other information - however, you can ignore these inputs when you define the function.
+
+Let's do this in the browser's Inspector.
   

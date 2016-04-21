@@ -1,0 +1,26 @@
+:javascript
+  function check_guess(guess) {
+    if(guess == 'c' || guess == 'a' || guess == 't') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  function set_answer(text) {
+    $('#answer').html(text);
+  }
+  
+  function check_inputbox() {
+    if(check_guess($('#guess').val())) {
+      set_answer('Yes');
+    } else {
+      set_answer('No');
+    }
+  }
+
+  function set_handlers() {
+    $('#submit-guess').click(check_inputbox);
+  }
+  $(document).ready(set_handlers);
+
