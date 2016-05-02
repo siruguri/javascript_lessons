@@ -45,12 +45,19 @@
         .title
           Hover for Menu
         .menu-items
-          .item.menu-action{'data-action' => 'toggle_code'}
+          .item.action-text.menu-action{'data-action' => 'toggle_code'}
             Toggle Code
           .item.menu-action
             %a{href:'https://docs.google.com/document/d/1f7PxEwWNzDqrl3bjSmpFxUmtM2SEWfGS452t51OWY5A/edit#heading=h.c430o642hrcy'}
               Codenvy Configuration Manual
-
+          .item.menu-action
+            Sponsor: 
+            %a{href:'https://www.dstrategies.org/'}
+              Digital Strategies
+            (
+            %a{href:'https://www.dstrategies.org/#contact'}
+              Contact Us
+            )
     %script
       var disqus_config = function () {
       this.page.url = 'https://www.javascriptlessons.site/#{current_page.path}'; 

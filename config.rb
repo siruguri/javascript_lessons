@@ -33,8 +33,10 @@ end
 # Methods defined in the helpers block are available in templates
 require 'source/helpers/taxonomy_helpers.rb'
 require 'source/helpers/display_helpers.rb'
+require 'source/helpers/markdown_helper.rb'
 helpers TaxonomyHelpers
 helpers DisplayHelpers
+helpers MarkdownHelper
 
 #   def some_helper
 #     "Helping"

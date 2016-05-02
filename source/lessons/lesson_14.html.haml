@@ -22,6 +22,9 @@ lesson_index: 14
   jQuery is a library that, among other things, helps reduce the
   clutter, by offering a set of functions that visually simplify the
   vocabulary for common tasks, like setting event handlers.
+
+%p
+  = markdown('To access a library, you have to add an HTML `script` tag in your HTML file, as a child of the `head` tag. The key attribute here is the `src` attribute which points to the location of the JavaScript library.')
   
 %p
   Among other things, notice that:
@@ -44,3 +47,14 @@ lesson_index: 14
     Everything is a function, rather than being a mix of properties and functions.
 
 = partial 'jquery_hangman_code'
+
+%h1
+  Exercises
+
+%ul
+  %li
+    After each click, it's cumbersome to have to click back into the textbox. Investigate jQuery to figure out how to automatically send the "
+    %a{href: '/glossary/keyboard_focus.html'}
+      keyboard focus
+    " back to the textbox.
+
