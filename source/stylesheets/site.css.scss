@@ -1,3 +1,4 @@
+@import 'variables';
 @charset "utf-8";
 @import "normalize";
 
@@ -158,7 +159,7 @@ pre[class*="language-"] {
 }
 
 .mc_embed_signup {
-  margin-top: 60px;
+  margin-top: 25px;
   input[type=email] {
     width: 40%;
     height: 60px;
@@ -169,4 +170,9 @@ pre[class*="language-"] {
 }
 .clear-my {
   display: inline-block;
+}
+
+.footer-row {
+  margin-top: 20px;
+  border-top: solid 1px $light-gray;
 }
