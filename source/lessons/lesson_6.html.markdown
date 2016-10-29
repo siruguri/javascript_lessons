@@ -18,7 +18,7 @@ way, it always has a length and width property that won't change when a document
 <p>
 Note though that to access these properties, you have to use the names `innerHeight` and `innerWidth`, rather than say
 "length" and "width" - the [syntax](glossary/syntax.html) and
-[semantics](glossary/semantics.html) don't seem to match up, though what's actually happening here is that there are additional semantics that we need to learn.
+[semantics](glossary/semantics.html) don't seem to match up. To understand what's actually happening here, when you use a property like `innerHeight`, we need to learn some additional semantics about the notions of "height" and "width," which are left as an exercise for the reader.
 
 To get at one of the nodes, we can access it by its name and `id` attribute, using the `getElementById()` function
 available on the document.
