@@ -11,3 +11,4 @@ gem 'middleman-s3_sync'
 gem 'redcarpet'
 gem 'middleman-pry'
 
+gem 'mime-types'

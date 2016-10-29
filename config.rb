@@ -53,7 +53,8 @@ configure :build do
 end
 
 activate :s3_sync do |config|
-  # This shd be overridden by the CLI parameter
+  config.aws_access_key_id          = ENV['AWS_S3_ID']
+  config.aws_secret_access_key      = ENV['AWS_SECRET_KEY']
   config.bucket                     = 'www.javascriptlessons.site'
   config.region                     = 'us-west-2'
 end
